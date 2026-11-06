@@ -2,711 +2,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hiba | Data Analyst Portfolio</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --cream: #f8f6f0;
-      --white: #fffefa;
-      --sage: #a8b5a0;
-      --dark: #343d35;
-      --brown: #796d5d;
-      --light: #e8e6dc;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--cream);
-      color: var(--dark);
-      font-family: 'DM Sans', sans-serif;
-      line-height: 1.7;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 8%;
-      background: var(--cream);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid var(--light);
-    }
-
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 25px;
-      font-weight: 700;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 25px;
-      list-style: none;
-      font-size: 13px;
-    }
-
-    nav a:hover {
-      color: #82917b;
-    }
-
-    .hero {
-      min-height: 570px;
-      padding: 110px 10%;
-      display: flex;
-      align-items: center;
-      background: var(--cream);
-    }
-
-    .hero-content {
-      max-width: 720px;
-    }
-
-    .eyebrow {
-      color: var(--brown);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(42px, 7vw, 68px);
-      line-height: 1.15;
-      margin: 20px 0;
-    }
-
-    h1 span {
-      color: #82917b;
-    }
-
-    .hero p {
-      color: var(--brown);
-      max-width: 570px;
-      font-size: 16px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--dark);
-      color: white;
-      padding: 13px 26px;
-      border-radius: 5px;
-      margin-top: 28px;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #82917b;
-      transform: translateY(-2px);
-    }
-
-    section {
-      padding: 85px 10%;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 37px;
-      margin-bottom: 12px;
-    }
-
-    .section-subtitle {
-      color: var(--brown);
-      margin-bottom: 35px;
-    }
-
-    .about {
-      background: var(--white);
-    }
-
-    .about p {
-      max-width: 800px;
-      color: var(--brown);
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 16px;
-    }
-
-    .skill {
-      background: var(--white);
-      padding: 22px;
-      border: 1px solid var(--light);
-      border-radius: 8px;
-      font-weight: 600;
-    }
-
-    .skill small {
-      display: block;
-      color: var(--brown);
-      font-weight: 400;
-      margin-top: 5px;
-    }
-
-    .projects {
-      background: var(--white);
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-    }
-
-    .project-card {
-      background: var(--cream);
-      padding: 28px;
-      border-radius: 9px;
-      border: 1px solid var(--light);
-      transition: 0.3s;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .project-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    .project-card p {
-      color: var(--brown);
-      font-size: 14px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 18px 0;
-    }
-
-    .tags span {
-      background: #e5e9df;
-      color: #52614f;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 11px;
-    }
-
-    .project-link {
-      font-size: 13px;
-      font-weight: 700;
-      text-decoration: underline;
-    }
-
-    .education-item {
-      background: var(--white);
-      padding: 24px;
-      border-left: 3px solid var(--sage);
-      margin-bottom: 15px;
-    }
-
-    .education-item p {
-      color: var(--brown);
-      font-size: 14px;
-    }
-
-    .contact {
-      background: #e9ebe2;
-      text-align: center;
-    }
-
-    .contact p {
-      color: var(--brown);
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: var(--brown);
-      font-size: 12px;
-    }
-
-.hero {
-  justify-content: space-between;
-  gap: 45px;
-  flex-wrap: wrap;
-}
-
-.hero-content {
-  flex: 1;
-  min-width: 280px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--dark);
-  border: 1px solid var(--sage);
-}
-
-.btn-outline:hover {
-  color: white;
-}
-
-.hero-note {
-  margin-top: 25px;
-  font-size: 12px;
-  color: var(--brown);
-  letter-spacing: 1px;
-}
-
-.visual-card {
-  flex: 0 1 350px;
-  min-width: 260px;
-  background: var(--white);
-  padding: 35px;
-  border: 1px solid var(--light);
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(80, 75, 60, 0.07);
-}
-
-.visual-top {
-  display: flex;
-  justify-content: space-between;
-  color: var(--brown);
-  font-size: 11px;
-  letter-spacing: 2px;
-}
-
-.visual-icon {
-  margin: 35px 0 10px;
-  font-size: 55px;
-  color: var(--sage);
-}
-
-.visual-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-}
-
-.visual-card p {
-  color: var(--brown);
-  font-size: 13px;
-  margin-top: 8px;
-}
-
-.visual-bars {
-  margin-top: 30px;
-  display: grid;
-  gap: 12px;
-}
-
-.visual-bars div {
-  height: 9px;
-  background: var(--light);
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.visual-bars span {
-  display: block;
-  height: 100%;
-  background: var(--sage);
-  border-radius: 20px;
-}
-
-.visual-footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 25px;
-  padding-top: 15px;
-  border-top: 1px solid var(--light);
-  color: var(--brown);
-  font-size: 11px;
-}
-.skills-subtitle {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
-  color: var(--dark);
-  margin: 35px 0 18px;
-}
-
-.skill {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.skill img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-  margin-bottom: 4px;
-}
-
-.skill small {
-  color: var(--brown);
-  line-height: 1.5;
-}
-
-.skills-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.skills-tags span {
-  background: var(--light);
-  color: var(--dark);
-  padding: 10px 16px;
-  border-radius: 25px;
-  font-size: 0.9rem;
-}
-@media (max-width: 650px) {
-  .visual-card {
-    width: 100%;
-  }
-}
-
-    @media (max-width: 650px) {
-      nav {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      nav ul {
-        gap: 13px;
-        flex-wrap: wrap;
-        justify-content: center;
-        font-size: 11px;
-      }
-
-      .hero {
-        padding: 85px 8%;
-        min-height: 480px;
-      }
-
-      section {
-        padding: 65px 8%;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hiba's Junior Data Analyst portfolio">
+<title>Hiba | Junior Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f8f6f0;--paper:#fffefa;--sage:#a8b5a0;--sage-dark:#74836e;--dark:#343d35;--brown:#796d5d;--line:#e8e6dc;--shadow:0 18px 45px #343d3514}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:85px}body{background:var(--cream);color:var(--dark);font:16px/1.7 'DM Sans',sans-serif}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.container{width:min(1160px,84%);margin:auto}.eyebrow{color:var(--sage-dark);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.section{padding:90px 0}.paper{background:var(--paper)}.title{font:600 clamp(2.2rem,4vw,3rem)/1.15 'Playfair Display',serif;margin:10px 0 12px}.subtitle,.muted{color:var(--brown)}.subtitle{max-width:650px}.btn{display:inline-flex;gap:8px;align-items:center;padding:12px 22px;border:1px solid var(--dark);border-radius:7px;background:var(--dark);color:white;font-size:.88rem;font-weight:600;transition:.25s}.btn:hover{transform:translateY(-3px);background:var(--sage-dark);border-color:var(--sage-dark)}.outline{background:transparent;color:var(--dark);border-color:var(--sage)}
+header.site-header{position:sticky;top:0;z-index:10;background:#f8f6f0ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}nav{width:min(1160px,84%);min-height:76px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font:700 1.65rem 'Playfair Display',serif}.nav-links{display:flex;gap:clamp(12px,2vw,25px);list-style:none}.nav-links a{font-size:.82rem;font-weight:600;color:var(--brown)}.nav-links a:hover{color:var(--sage-dark)}.menu{display:none;padding:8px 12px;border:1px solid var(--line);background:var(--paper);border-radius:7px}
+.hero{padding:80px 0 95px}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:7%}.hero h1{font:600 clamp(3rem,6vw,5.2rem)/1.07 'Playfair Display',serif;letter-spacing:-.04em;margin:18px 0 22px}.accent{color:var(--sage-dark)}.hero-copy{max-width:590px;color:var(--brown);font-size:1.03rem}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.note{margin-top:22px;color:var(--brown);font-size:.8rem}.portrait{width:min(100%,420px);justify-self:end;aspect-ratio:4/5;border-radius:48% 48% 16px 16px;overflow:hidden;background:#e4e6dc;box-shadow:var(--shadow)}.placeholder{height:100%;min-height:200px;display:grid;place-items:center;text-align:center;padding:25px;background:linear-gradient(145deg,#e9e8df,#dce3d7);color:var(--brown);font-size:.9rem}.portrait .placeholder{min-height:100%}
+.about-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:8%;align-items:center}.about-photo{aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:#e4e6dc;box-shadow:var(--shadow)}.about-copy p{margin:14px 0;color:var(--brown)}
+.skill-group{margin-top:34px}.skill-group h3{font:600 1.35rem 'Playfair Display',serif;margin-bottom:16px}.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.skill{min-height:135px;padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--paper);display:flex;flex-direction:column;justify-content:center;gap:6px;transition:.25s}.skill:hover,.project:hover,.cert:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.symbol{width:35px;height:35px;display:grid;place-items:center;border-radius:9px;background:#e9ede5;color:var(--sage-dark);font-size:.75rem;font-weight:700}.skill small{color:var(--brown);font-size:.78rem}.tags{display:flex;flex-wrap:wrap;gap:9px}.tags span{background:#e9ede5;color:#53624f;padding:7px 12px;border-radius:25px;font-size:.78rem;font-weight:600}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:35px}.project{border:1px solid var(--line);border-radius:14px;background:var(--cream);overflow:hidden;transition:.25s}.cover{aspect-ratio:16/9;background:#e6e8df}.project-body{padding:24px}.number{color:var(--sage-dark);font-size:.72rem;font-weight:700;letter-spacing:.15em}.project h3,.case h3{font:600 1.45rem 'Playfair Display',serif;margin:8px 0}.project p,.case p{color:var(--brown);font-size:.9rem}.project-body .tags{margin:15px 0}.link{color:var(--sage-dark);font-weight:700;font-size:.88rem}.case{padding-top:42px;margin-top:42px;border-top:1px solid var(--line)}.overview{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;padding:23px;background:var(--cream);border-radius:12px;margin:18px 0 30px}.meta{display:grid;grid-template-columns:1fr 1fr;gap:10px}.meta div{padding:10px;background:var(--paper);border-radius:8px}.meta small{display:block;color:var(--brown);font-size:.7rem}.meta strong{font-size:.82rem}.tool{margin:30px 0}.tool h4{font:600 1.3rem 'Playfair Display',serif;margin-bottom:7px}.tool>p{color:var(--brown);font-size:.9rem;margin-bottom:15px}.showcase{border:1px solid var(--line);padding:8px;border-radius:12px;background:var(--paper)}.showcase img{width:100%;height:auto;border-radius:7px}.sql-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.sql-grid figure{margin:0}.sql-grid figcaption{padding:8px 2px;color:var(--brown);font-size:.8rem}.results{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}.result{padding:18px;background:var(--cream);border:1px solid var(--line);border-radius:10px}.result strong{display:block;font:600 1.6rem 'Playfair Display',serif}.result span{font-size:.78rem;color:var(--brown)}
+.timeline{border-left:2px solid var(--sage);padding-left:26px;margin-left:8px}.timeline-item{position:relative;padding-bottom:28px}.timeline-item:before{content:'';position:absolute;left:-33px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--sage-dark);border:3px solid var(--cream)}.timeline h3{font:600 1.2rem 'Playfair Display',serif}.timeline p,.timeline small{color:var(--brown)}.learning{margin-top:25px;padding:18px;background:var(--paper);border-radius:10px;color:var(--brown)}.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.cert{border:1px solid var(--line);border-radius:12px;background:var(--paper);overflow:hidden;transition:.25s}.cert-image{aspect-ratio:4/3;background:#e8e6dc}.cert-info{padding:14px}.cert-info h3{font-size:.9rem;line-height:1.4}.cert-info p{font-size:.77rem;color:var(--brown);margin-top:5px}
+.contact{background:#e9ebe2;text-align:center}.contact-content{max-width:680px;margin:auto}.contact-content p{color:var(--brown);margin:12px 0 24px}.social{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:23px}.social a{padding:9px 15px;border:1px solid #343d3533;border-radius:7px;font-size:.85rem;font-weight:600}.social a:hover{background:var(--paper)}footer{text-align:center;padding:24px;color:var(--brown);font-size:.78rem}.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){.skills{grid-template-columns:repeat(2,1fr)}.cert-grid{grid-template-columns:repeat(2,1fr)}.container,nav{width:90%}}
+@media(max-width:680px){nav{min-height:68px;flex-wrap:wrap;padding:10px 0}.menu{display:block}.nav-links{display:none;width:100%;flex-wrap:wrap;padding:8px 0 14px;gap:13px 18px}.nav-links.open{display:flex}.hero-grid,.about-grid,.overview{grid-template-columns:1fr}.hero-grid{gap:35px}.hero{padding:60px 0 70px}.portrait{justify-self:center;width:min(78%,330px)}.section{padding:70px 0}.project-grid{grid-template-columns:1fr}.sql-grid{grid-template-columns:1fr}.results{grid-template-columns:1fr}.cert-grid{grid-template-columns:repeat(2,1fr)}.project-body{padding:19px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+</style>
 </head>
-
 <body>
+<header class="site-header"><nav aria-label="Main navigation">
+<a class="brand" href="#home">Hiba.</a><button class="menu" id="menu" aria-expanded="false">Menu</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#certificates">Certificates</a></li><li><a href="#contact">Contact</a></li>
+</ul></nav></header>
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+<div class="reveal"><div class="eyebrow">Welcome to my portfolio</div><h1>Junior<br><span class="accent">Data Analyst</span></h1>
+<p class="hero-copy">I'm interested in Data Analytics and Business Intelligence, with a passion for exploring data and turning it into meaningful insights.</p>
+<div class="actions"><a class="btn" href="#projects">View My Projects ↗</a><a class="btn outline" href="assets/Hiba-CV.pdf" download>Download CV ↓</a></div></div>
+<div class="portrait reveal"><div class="placeholder">Home portrait will be added here</div><!-- Replace with <img src="assets/images/home-portrait.jpg" alt="Portrait of Hiba"> --></div>
+</div></section>
 
-  <nav>
-    <a href="#" class="logo">Hiba.</a>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<section class="section paper" id="about"><div class="container about-grid">
+<div class="about-photo reveal"><div class="placeholder">About photo will be added here</div><!-- Replace with <img src="assets/images/about-photo.jpg" alt="Hiba"> --></div>
+<div class="about-copy reveal"><div class="eyebrow">A little about me</div><h2 class="title">Curious Mind, <span class="accent">Analytical Approach.</span></h2>
+<p>I'm an Energy Physics graduate with a growing interest in Data Analytics and Business Intelligence.</p>
+<p>I'm developing my skills in Excel, SQL and Power BI, while exploring Python, Statistics and Business Analysis.</p>
+<p>I enjoy working with data, discovering patterns and turning information into meaningful insights. My background has helped me develop analytical thinking, problem-solving skills and a structured approach to learning.</p></div>
+</div></section>
 
-  
-<header class="hero" id="home">
-  <div class="hero-content">
+<section class="section" id="skills"><div class="container">
+<div class="eyebrow">What I work with</div><h2 class="title">Skills <span class="accent">&</span> Tools</h2><p class="subtitle">Tools and analytical skills I use and continue to develop through learning and practical projects.</p>
+<div class="skill-group"><h3>Data Analytics</h3><div class="skills">
+<div class="skill"><span class="symbol">EX</span><strong>Excel</strong><small>Data analysis & reporting</small></div>
+<div class="skill"><span class="symbol">SQL</span><strong>SQL Server</strong><small>Queries & data analysis</small></div>
+<div class="skill"><span class="symbol">BI</span><strong>Power BI</strong><small>Dashboards & visualization</small></div></div></div>
+<div class="skill-group"><h3>Programming</h3><div class="skills">
+<div class="skill"><span class="symbol">Py</span><strong>Python</strong><small>Currently learning</small></div>
+<div class="skill"><span class="symbol">MAT</span><strong>MATLAB</strong><small>Previous academic experience</small></div></div></div>
+<div class="skill-group"><h3>Analytical Skills</h3><div class="tags"><span>Statistics</span><span>Data Cleaning</span><span>Data Visualization</span><span>KPI Analysis</span><span>Business Analysis</span><span>Problem Solving</span></div></div>
+<div class="skill-group"><h3>AI & Productivity Tools</h3><div class="skills">
+<div class="skill"><span class="symbol">AI</span><strong>ChatGPT</strong><small>Research & learning support</small></div><div class="skill"><span class="symbol">AI</span><strong>Claude</strong><small>Writing & productivity</small></div><div class="skill"><span class="symbol">AI</span><strong>Gemini</strong><small>Research & AI assistance</small></div><div class="skill"><span class="symbol">Ca</span><strong>Canva</strong><small>Visual content & design</small></div><div class="skill"><span class="symbol">Co</span><strong>Microsoft Copilot</strong><small>AI-powered productivity</small></div></div></div>
+</div></section>
 
-    <div class="eyebrow">HELLO, WELCOME TO MY PORTFOLIO</div>
+<section class="section paper" id="projects"><div class="container">
+<div class="eyebrow">Selected work</div><h2 class="title">Featured <span class="accent">Projects</span></h2><p class="subtitle">A closer look at how I use data tools to explore business questions and communicate findings.</p>
+<div class="project-grid">
+<article class="project reveal"><div class="cover placeholder">Sales dashboard preview will be added</div><div class="project-body"><span class="number">PROJECT 01</span><h3>Sales & Business Performance Analysis</h3><p>Analysis of AdventureWorks sales data to explore revenue, orders, customers, products, categories and territories.</p><div class="tags"><span>Excel</span><span>SQL Server</span><span>Power BI</span></div><a class="link" href="#sales-details">Explore project details ↓</a></div></article>
+<article class="project reveal"><div class="cover placeholder">HR dashboard preview will be added</div><div class="project-body"><span class="number">PROJECT 02</span><h3>HR Analytics — Employee Attrition</h3><p>Exploration of employee data to review attrition patterns and HR indicators across a dataset of 1,470 employees.</p><div class="tags"><span>Excel</span><span>Power BI</span></div><a class="link" href="#hr-details">Explore project details ↓</a></div></article>
+</div>
 
-    <h1>I'm Hiba,<br>
-      <span>Junior Data Analyst.</span>
-    </h1>
+<article class="case" id="sales-details"><div class="eyebrow">Project 01 · Case study</div><h3 class="title">Sales & Business Performance Analysis</h3>
+<div class="overview"><div><h4>Project Overview</h4><p>This project analyzes AdventureWorks sales data to understand business performance across products, customers, categories and territories. Excel, SQL Server and Power BI were used to prepare, query and visualize the data.</p></div>
+<div class="meta"><div><small>Dataset</small><strong>AdventureWorks</strong></div><div><small>Period</small><strong>2022–2025</strong></div><div><small>Tools</small><strong>Excel · SQL · Power BI</strong></div><div><small>Type</small><strong>Business Analysis</strong></div></div></div>
+<div class="tool"><h4>01. Excel Analysis</h4><p>Excel dashboard presenting key sales indicators and business summaries.</p><div class="showcase placeholder">Add sales Excel dashboard image here</div></div>
+<div class="tool"><h4>02. SQL Server Analysis</h4><p>SQL queries used to aggregate sales data and examine top-performing products and sales territories.</p><div class="sql-grid">
+<figure><div class="showcase placeholder">Add SQL Top 10 Products screenshot</div><figcaption>Top 10 Products by Total Sales</figcaption></figure>
+<figure><div class="showcase placeholder">Add SQL Sales by Territory screenshot</div><figcaption>Sales by Territory</figcaption></figure></div><p style="margin-top:14px"><a class="link" href="https://github.com/hibaka-01/Sales-Business-Performance-Analysis" target="_blank" rel="noopener">View SQL scripts on GitHub ↗</a></p></div>
+<div class="tool"><h4>03. Power BI Dashboard</h4><p>Interactive overview of sales KPIs, category performance, sales trends, territories and top products.</p><div class="showcase placeholder">Add Sales Power BI dashboard image here</div></div>
+<div class="tool"><h4>Key Results</h4><div class="results"><div class="result"><strong>109.85M</strong><span>Total Sales</span></div><div class="result"><strong>31,465</strong><span>Total Orders</span></div><div class="result"><strong>19,119</strong><span>Total Customers</span></div></div><a class="link" href="https://github.com/hibaka-01/Sales-Business-Performance-Analysis" target="_blank" rel="noopener">View full project on GitHub ↗</a></div>
+</article>
 
-    <p>
-      Turning data into insights and ideas into meaningful
-      business decisions. Passionate about analytics,
-      problem-solving and continuous learning.
-    </p>
+<article class="case" id="hr-details"><div class="eyebrow">Project 02 · Case study</div><h3 class="title">HR Analytics — Employee Attrition</h3>
+<div class="overview"><div><h4>Project Overview</h4><p>This project explores employee data to examine attrition patterns and HR indicators. Excel and Power BI were used to organize information and present findings from a dataset of 1,470 employees.</p></div><div class="meta"><div><small>Dataset</small><strong>1,470 employees</strong></div><div><small>Tools</small><strong>Excel · Power BI</strong></div><div><small>Type</small><strong>HR Analytics</strong></div><div><small>Repository</small><strong>GitHub</strong></div></div></div>
+<div class="tool"><h4>01. Excel Analysis</h4><p>Excel dashboard used to summarize employee data and attrition indicators.</p><div class="showcase placeholder">Add HR Excel dashboard image here</div></div>
+<div class="tool"><h4>02. Power BI Dashboard</h4><p>Dashboard view of employee attrition and HR indicators. Specific findings will be added after reviewing the project screenshots.</p><div class="showcase placeholder">Add HR Power BI dashboard image here</div></div>
+<a class="btn" href="https://github.com/hibaka-01/HR-Analytics-Employee-Attrition-Analysis" target="_blank" rel="noopener">View HR Project on GitHub ↗</a>
+</article></div></section>
 
-    <div class="hero-buttons">
-      <a href="#projects" class="btn">Explore My Projects →</a>
-      <a href="https://github.com/hibaka-01"
-         target="_blank" class="btn btn-outline">
-         View GitHub
-      </a>
-    </div>
+<section class="section" id="education"><div class="container"><div class="eyebrow">Academic background</div><h2 class="title">Education</h2>
+<div class="timeline">
+<div class="timeline-item"><h3>Master 1 — Renewable Energy and Energy Efficiency</h3><p>University of Science and Technology Houari Boumediene (USTHB)</p><small>2026 – Present · Currently studying</small></div>
+<div class="timeline-item"><h3>Bachelor's Degree — Energy Physics</h3><p>University of Science and Technology Houari Boumediene (USTHB)</p><small>2020 – 2024 · Completed</small></div></div>
+<div class="learning"><strong>Python & Applied Numerical Methods</strong><br>Currently learning Python through independent study and university coursework, including its application in numerical methods.</div>
+</div></section>
 
-    <div class="hero-note">
-      Open to Internship & Entry-Level Opportunities
-    </div>
+<section class="section paper" id="certificates"><div class="container"><div class="eyebrow">Continuous learning</div><h2 class="title">Certificates</h2><p class="subtitle">Selected courses and certificates supporting my professional development.</p>
+<div class="cert-grid" style="margin-top:30px">
+<article class="cert"><div class="cert-image placeholder">Excel certificate image</div><div class="cert-info"><h3>Microsoft Excel: Learn with Projects Specialization</h3><p>Coursera · 2026</p></div></article>
+<article class="cert"><div class="cert-image placeholder">SQL certificate image</div><div class="cert-info"><h3>SQL Foundations</h3><p>Microsoft Certificate · Coursera · 2026</p></div></article>
+<article class="cert"><div class="cert-image placeholder">Power BI certificate image</div><div class="cert-info"><h3>Power BI Fundamentals</h3><p>Corporate Finance Institute · Coursera · 2026</p></div></article>
+<article class="cert"><div class="cert-image placeholder">Digital Marketing certificate image</div><div class="cert-info"><h3>The Complete Digital Marketing Course — 12 Courses in 1</h3><p>Udemy · 2026</p></div></article>
+</div></div></section>
 
-  </div>
-
-  <div class="visual-card">
-    <div class="visual-top">
-      <span>DATA ANALYTICS</span>
-      <span>✦</span>
-    </div>
-
-    <div class="visual-icon">✧</div>
-
-    <h3>Explore. Analyze. Discover.</h3>
-    <p>Transforming raw data into meaningful insights.</p>
-
-    <div class="visual-bars">
-      <div><span style="width:85%"></span></div>
-      <div><span style="width:65%"></span></div>
-      <div><span style="width:95%"></span></div>
-      <div><span style="width:75%"></span></div>
-    </div>
-
-    <div class="visual-footer">
-      <span>Excel</span>
-      <span>SQL</span>
-      <span>Power BI</span>
-    </div>
-  </div>
-</header>
-
-
-  
-<section class="about" id="about">
-  <div class="eyebrow">A little about me</div>
-
-  <h2 class="section-title">Curious Mind, Analytical Approach.</h2>
-
-  <p>
-    I am an Energy Physics graduate with a growing passion
-    for Data Analytics and Business Intelligence.
-    My academic background has helped me build strong
-    analytical thinking, problem-solving and quantitative skills.
-    <br><br>
-
-    Through practical projects and continuous learning,
-    I have been developing my skills in Excel, SQL and Power BI,
-    while currently exploring Python, Statistics and Business Analysis.
-    <br><br>
-
-    I enjoy learning new things, exploring data and turning
-    information into meaningful insights.
-    I am currently looking for an internship or an entry-level
-    opportunity where I can apply my knowledge, gain practical
-    experience and continue growing professionally.
-  </p>
-</section>
-
-  <section id="skills">
-  <div class="eyebrow">What I work with</div>
-  <h2 class="section-title">My Skills & Tools</h2>
-  <p class="section-subtitle">
-    Tools and skills I use and develop through learning and practical projects.
-  </p>
-
-  <h3 class="skills-subtitle">Data Analytics Tools</h3>
-  <div class="skills-grid">
-
-    <div class="skill">
-      <span class="tool-icon excel-icon">EX</span>
-      Excel
-      <small>Data analysis & reporting</small>
-    </div>
-
-    <div class="skill">
-      <img src="https://cdn.simpleicons.org/microsoftsqlserver/CC2927" alt="SQL Server">
-      SQL Server
-      <small>Queries & data manipulation</small>
-    </div>
-
-    <div class="skill">
-      <img src="https://cdn.simpleicons.org/powerbi/F2C811" alt="Power BI">
-      Power BI
-      <small>Dashboards & visualization</small>
-    </div>
-
-    <div class="skill">
-      <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python">
-      Python
-      <small>Currently learning</small>
-    </div>
-  </div>
-
-  <h3 class="skills-subtitle">AI Assistants</h3>
-  <div class="skills-grid">
-
-    <div class="skill">
-      <img src="https://cdn.simpleicons.org/openai/412991" alt="ChatGPT">
-      ChatGPT
-      <small>Research & learning support</small>
-    </div>
-
-    <div class="skill">
-      <img src="https://cdn.simpleicons.org/claude/D97757" alt="Claude">
-      Claude
-      <small>Writing & productivity</small>
-    </div>
-
-    <div class="skill">
-      <img src="https://cdn.simpleicons.org/googlegemini/8E75B2" alt="Google Gemini">
-      Google Gemini
-      <small>Research & AI assistance</small>
-    </div>
-  </div>
-
-  <h3 class="skills-subtitle">Productivity & Design</h3>
-  <div class="skills-grid">
-
-    <div class="skill">
-      <img src="https://cdn.simpleicons.org/canva/00C4CC" alt="Canva">
-      Canva
-      <small>Visual content & design</small>
-    </div>
-
-    <div class="skill">
-      <img src="https://cdn.simpleicons.org/microsoftcopilot/258FFA" alt="Microsoft Copilot">
-      Microsoft Copilot
-      <small>AI-powered productivity</small>
-    </div>
-  </div>
-
-  <h3 class="skills-subtitle">Analytical Skills</h3>
-  <div class="skills-tags">
-    <span>Statistics</span>
-    <span>Data Cleaning</span>
-    <span>Data Visualization</span>
-    <span>KPI Analysis</span>
-    <span>Business Analysis</span>
-    <span>Problem Solving</span>
-  </div>
-</section>
-
-  
-<section class="projects" id="projects">
-  <div class="eyebrow">My work</div>
-  <h2 class="section-title">Featured Projects</h2>
-  <p class="section-subtitle">
-    Practical projects where I apply analytical skills to real-world datasets.
-  </p>
-
-  <div class="project-grid">
-
-    <div class="project-card">
-      <h3>Sales Business Performance Analysis</h3>
-
-      <p>
-        An end-to-end sales analysis project using AdventureWorks
-        data to evaluate business performance, customer behavior,
-        product categories and regional sales.
-      </p>
-
-      <div class="tags">
-        <span>Excel</span>
-        <span>SQL Server</span>
-        <span>Power BI</span>
-      </div>
-
-      <p><strong>Key Results:</strong></p>
-      <p>
-        Total Sales: 109.85M<br>
-        Total Orders: 31,465<br>
-        Total Customers: 19,119
-      </p>
-
-      <a class="project-link"
-         href="https://github.com/hibaka-01/Sales-Business-Performance-Analysis"
-         target="_blank">
-         View Project on GitHub →
-      </a>
-    </div>
-
-    <div class="project-card">
-      <h3>HR Analytics – Employee Attrition</h3>
-
-      <p>
-        An HR analytics project exploring employee attrition,
-        workforce patterns and key HR indicators through
-        data analysis and interactive dashboards.
-      </p>
-
-      <div class="tags">
-        <span>Excel</span>
-        <span>Power BI</span>
-        <span>Data Visualization</span>
-      </div>
-
-      <a class="project-link"
-         href="https://github.com/hibaka-01"
-         target="_blank">
-         View Project on GitHub →
-      </a>
-    </div>
-
-  </div>
-</section>
-
-
-  <section id="education">
-    <div class="eyebrow">My background</div>
-    <h2 class="section-title">Education & Certificates</h2>
-
-    <div class="education-item">
-      <h3>Licence in Energy Physics</h3>
-      <p>University of Science and Technology Houari Boumediene (USTHB)</p>
-    </div>
-
-    <div class="education-item">
-      <h3>Microsoft Excel: Learn with Projects</h3>
-      <p>Coursera – Specialization</p>
-    </div>
-
-    <div class="education-item">
-      <h3>SQL Foundations</h3>
-      <p>Professional learning certificate</p>
-    </div>
-
-    <div class="education-item">
-      <h3>Power BI Fundamentals</h3>
-      <p>Professional learning certificate</p>
-    </div>
-
-    <div class="education-item">
-      <h3>Digital Marketing</h3>
-      <p>The Complete Digital Marketing Course – Udemy</p>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="eyebrow">Let's connect</div>
-    <h2 class="section-title">Get In Touch</h2>
-    <p>
-      I am open to internship opportunities and entry-level
-      positions in Data Analytics.
-    </p>
-
-    <a class="btn"
-       href="https://github.com/hibaka-01"
-       target="_blank">GitHub Profile</a>
-  </section>
-
-  <footer>
-    © 2026 Hiba. All rights reserved.
-  </footer>
-
+<section class="section contact" id="contact"><div class="container contact-content"><div class="eyebrow">Let's connect</div><h2 class="title">Get in <span class="accent">Touch</span></h2><p>I'm interested in Data Analytics opportunities, internships and opportunities to keep learning and contribute to a team.</p>
+<a class="btn" href="mailto:hkouiderayad@gmail.com">Send me an email ↗</a>
+<div class="social"><a href="https://www.linkedin.com/in/hiba-k-ab6030389" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/hibaka-01" target="_blank" rel="noopener">GitHub ↗</a><a href="assets/Hiba-CV.pdf" download>Download CV ↓</a></div>
+</div></section>
+</main>
+<footer>© 2026 Hiba. All rights reserved.</footer>
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('navLinks');
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');}));
+const items=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){const observer=new IntersectionObserver((entries,obs)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:.12});items.forEach(el=>observer.observe(el));}
+else items.forEach(el=>el.classList.add('visible'));
+</script>
 </body>
 </html>
