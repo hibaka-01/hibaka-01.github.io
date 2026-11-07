@@ -23,7 +23,13 @@
 .contact-section{background:#e9ece4}.contact-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:35px;flex-wrap:wrap}.contact-inner h2{font:600 clamp(2.4rem,5vw,3.7rem)/1.1 var(--serif);margin:10px 0 15px}.contact-inner p{color:var(--muted);max-width:520px;margin:0}.contact-links{display:flex;flex-wrap:wrap;gap:12px;max-width:470px}.contact-links a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;background:var(--paper);border:1px solid #d8ded2;border-radius:5px;color:var(--ink);font-size:.84rem;font-weight:700;box-shadow:0 5px 16px rgba(39,44,36,.04);transition:transform .25s,background .25s,color .25s}.contact-links a:hover{transform:translateY(-3px);background:var(--ink);color:#fff}.footer{padding:25px 0;background:var(--ink);color:#d9ddd5}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:.77rem}.footer p{margin:0;color:#b8beb4}.back-top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border:0;border-radius:50%;background:var(--ink);color:white;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;z-index:40}.back-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
 /* Scroll-triggered movement */
 .js-ready .reveal{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
-.js-ready .reveal.from-left{transform:translateX(-35px)}.js-ready .reveal.from-right{transform:translateX(35px)}.js-ready .reveal.zoom-in{transform:scale(.94)}
+.js-ready .reveal.from-left {
+  transform: translateX(-70px);
+}
+
+.js-ready .reveal.from-right {
+  transform: translateX(70px);
+}.js-ready .reveal.zoom-in{transform:scale(.94)}
 .js-ready .reveal.is-visible{opacity:1;transform:translate(0) scale(1)}
 .js-ready .stagger>*{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
 .js-ready .stagger.is-visible>*{opacity:1;transform:translateY(0)}
@@ -62,7 +68,7 @@
   </div>
 </section>
 
-<<section class="section about-section" id="about">
+<section class="section about-section" id="about">
   <div class="container about-grid">
     <div class="about-photo-frame reveal from-left">
       <img class="about-photo" src="assets/about-photo.jpg"
@@ -195,7 +201,7 @@ if ('IntersectionObserver' in window) {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.14, rootMargin: '0px 0px -35px 0px' });
+  }, { threshold: 0.05, rootMargin: '0px 0px -10px 0px' });
 
   document.querySelectorAll('.reveal, .stagger').forEach(element => revealObserver.observe(element));
 } else {
